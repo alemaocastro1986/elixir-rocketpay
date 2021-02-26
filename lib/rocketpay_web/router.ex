@@ -28,6 +28,7 @@ defmodule RocketpayWeb.Router do
     post "/accounts/transaction", AccountsController, :transaction
   end
 
+  # coveralls-ignore-start
   if Mix.env() in [:dev, :test] do
     import Phoenix.LiveDashboard.Router
 
@@ -36,4 +37,6 @@ defmodule RocketpayWeb.Router do
       live_dashboard "/dashboard", metrics: RocketpayWeb.Telemetry
     end
   end
+
+  # coveralls-ignore-stop
 end

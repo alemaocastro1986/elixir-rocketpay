@@ -28,11 +28,13 @@ defmodule RocketpayWeb.ChannelCase do
     end
   end
 
+  alias Ecto.Adapters.SQL.Sandbox
+
   setup tags do
-    :ok = Ecto.Adapters.SQL.Sandbox.checkout(Rocketpay.Repo)
+    :ok = Sandbox.checkout(Rocketpay.Repo)
 
     unless tags[:async] do
-      Ecto.Adapters.SQL.Sandbox.mode(Rocketpay.Repo, {:shared, self()})
+      Sandbox.mode(Rocketpay.Repo, {:shared, self()})
     end
 
     :ok
