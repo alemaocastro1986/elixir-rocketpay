@@ -1,0 +1,9 @@
+{
+  "skip_files": [
+    "test/",
+    "lib/rocketpay.ex",
+    "lib/rocketpay_web.ex",
+    "lib/rocketpay/application.ex",
+    "lib/rocketpay_web/views/error_helpers.ex"
+  ]
+}
