@@ -10,15 +10,28 @@ Desenvolvimento API de pagamentos, estilo PicPay
 - Withraw
 - Transactions
 
+## Dependencias utilizadas
+```elixir
+defp deps do
+  [
+    # ...default deps
+    {:credo, "~>1.5", only: [:dev, :test], runtime: false},
+    {:bcrypt_elixir, "~> 2.0"},
+    {:decimal, "~>2.0"},
+    {:excoveralls, "~> 0.10", only: :test}
+  ]
+end 
 
-### # Dia 1
+```
+
+## # Dia 1
 - Fundamento do Elixir e Phoenix Framework
 - Criação de novos projetos com Phoenix  
   - `mix phx.new rocketpay --no-webpack --no-html`
 - Pattern Match
 - Pipe operator `|>`
 
-### # Dia 2
+## # Dia 2
 - Lindando com banco de dados com `Ecto`
   - migrations
     - generate `mix ecto.gen.migration <table_name>`
@@ -30,7 +43,7 @@ Desenvolvimento API de pagamentos, estilo PicPay
   - controller
   - views `.json`
 
-  ### # Dia 3
+  ## # Dia 3
 - Separação por contextos
   - users
   - accounts
@@ -42,10 +55,22 @@ Desenvolvimento API de pagamentos, estilo PicPay
 - Roteamento com parâmetros
 - Padrão facade com `defdelegate`
 
-### # Dia 4
+## # Dia 4
 - Refatorando regras de negócio aplicando o conceito de DRY
 - Criação de custom structs com `defstruct`
 - Criação de Atoms dinâmicos
+
+
+## # Dia 5
+- Refatorando bugs
+- Tasks e Processos (visão de como funciona)
+- Autenticação
+  - Basic Auth
+  - Pipeline para rotas autenticadas
+- Criação de testes
+  - Regras de negócio
+  - Controllers
+  - Views
 
 
 # run project
